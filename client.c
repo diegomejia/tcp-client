@@ -40,11 +40,11 @@ void infinite(int socketFD)
         
         n = 0; // Reset n, for follow-up input string. 
         
-        printf("from server: %s", stringBuffer); 
+        printf("from server: %s\r\n", stringBuffer); 
         
         if((strncmp(stringBuffer, "exit", 4)) == 0) 
         {
-            printf("tcp-client is shutting down...\n");
+            printf("tcp-client is shutting down...\r\n");
             break; 
         } 
     }
@@ -58,7 +58,7 @@ int main()
     // Socket File Descriptor creation and verification.
     socketFD = socket(AF_INET, SOCK_STREAM, 0); 
     if(socketFD == ERROR) { 
-        printf("Socket creation failed...\n"); 
+        printf("Socket creation failed...\r\n"); 
         exit(0); 
     } 
     else {
