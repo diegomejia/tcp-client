@@ -36,7 +36,9 @@ void infinite(int socketFD)
 
         write(socketFD, stringBuffer, sizeof(char) * n); 
         bzero(          stringBuffer, sizeof(stringBuffer)); 
-        read (socketFD, stringBuffer, sizeof(char) * n); 
+        read (socketFD, stringBuffer, sizeof(char) * n);
+        
+        n = 0; // Reset n, for follow-up input string. 
         
         printf("from server: %s", stringBuffer); 
         
