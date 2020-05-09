@@ -82,12 +82,12 @@ int main(int argc, char *argv[])
       if((strncmp(argv[1], IPV4_ARG, 5)) == 0 &&
          (strncmp(argv[3], PORT_ARG, 5)){
                 serverAddress.sin_addr.s_addr = inet_addr(argv[2]);
-                serverAddress.sin_port = htons((unsigned int)atoi(argv[4]));
+                serverAddress.sin_port = htons((unsigned short)atoi(argv[4]));
       }
       else if((strncmp(argv[3], IPV4_ARG, 5)) == 0 &&
               (strncmp(argv[1], PORT_ARG, 5)) == 0    ){
                 serverAddress.sin_addr.s_addr = inet_addr(argv[4]);
-                serverAddress.sin_port = htons((unsigned int)atoi(argv[2]));
+                serverAddress.sin_port = htons((unsigned short)atoi(argv[2]));
       }
     } else {
       serverAddress.sin_addr.s_addr = inet_addr(DEFAULT_IPV4_ADDR);
