@@ -30,7 +30,7 @@ void infinite(int socketFD)
             stringBuffer[n] = getchar();
             n++;
         }
-        while ( stringBuffer[n] != '\n' && stringBuffer[n] != '\r' && n < MAX);
+        while ( stringBuffer[n-1] != '\n' && stringBuffer[n-1] != '\r' && n <= MAX);
 
         stringBuffer[n] = '\0';
 
