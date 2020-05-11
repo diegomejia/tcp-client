@@ -1,7 +1,7 @@
 /*
     -- Author: Diego Mejia
     If you remove authorship you're a prick. 
-    RedWall Studios ©
+    RedWall Studios LLC ©
 */
 
 #include <stdlib.h>
