@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
     // Check for use of command line arguments.
     if(argc > NO_ARGS && argc == VALID_NUM_ARGS){
       if((strncmp(argv[1], IPV4_ARG, 5)) == 0 &&
-         (strncmp(argv[3], PORT_ARG, 5)){
+         (strncmp(argv[3], PORT_ARG, 5))){
                 serverAddress.sin_addr.s_addr = inet_addr(argv[2]);
                 serverAddress.sin_port = htons((unsigned short)atoi(argv[4]));
       }
